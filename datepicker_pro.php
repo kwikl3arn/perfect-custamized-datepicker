@@ -42,10 +42,10 @@ $(document).ready(function() {
 	dateFormat:'dd-mm-yy',
     stepMonths: false,
 	
-	//maxDate: "today",
-   // endDate: "today",
-    endDate: "<?php echo date('d-m-y');?>",
-    maxDate: "<?php echo date('d-m-y');?>",
+	//maxDate: "today",//takes from script
+   // endDate: "today",//takes from script
+    endDate: "<?php echo date('d-m-y');?>",//takes from sever
+    maxDate: "<?php echo date('d-m-y');?>",//takes from sever
   
 	
     onSelect: function(selected) {
@@ -59,10 +59,10 @@ $(document).ready(function() {
     changeYear: true,
 	dateFormat:'dd-mm-yy',
     stepMonths: false,
-   endDate: "<?php echo date('d-m-y');?>",
-    maxDate: "<?php echo date('d-m-y');?>",
-    //maxDate: "today",
-   // endDate: "today",
+   endDate: "<?php echo date('d-m-y');?>",//takes from sever
+    maxDate: "<?php echo date('d-m-y');?>",//takes from sever
+    //maxDate: "today",//takes from script
+   // endDate: "today",//takes from script
     onSelect: function(selected) {
       $("#txtFromDate").datepicker("option", "maxDate", selected)
     }
